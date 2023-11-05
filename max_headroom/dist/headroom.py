@@ -24,6 +24,9 @@ from machine import Pin, SPI
 import gc9a01
 import h1, h2, h3, h4, h5
 
+
+
+"""
 TOASTERS = [h1, h2, h3, h4]
 TOAST = [h5]
 
@@ -48,7 +51,7 @@ class toast():
         self.step += 1
         self.step %= self.steps
         self.x -= self.speed
-
+"""
 
 def main():
     '''
@@ -80,6 +83,22 @@ def main():
     tft.init()
     tft.fill(gc9a01.BLACK)
 
+    while True:
+        tft.bitmap(h1, 0, 0)
+        time.sleep(0.05)
+        tft.bitmap(h2, 0, 0)
+        time.sleep(0.05)
+        tft.bitmap(h3, 0, 0)
+        time.sleep(0.05)
+        tft.bitmap(h4, 0, 0)
+        time.sleep(0.05)
+        tft.bitmap(h5, 0, 0)
+        time.sleep(0.05)
+   
+    #while True:
+    #    for frame in frames:
+
+    """
     # create toast spites in random positions
     sprites = [
         toast(TOASTERS, tft.width()-64, 0),
@@ -111,6 +130,6 @@ def main():
                     gc9a01.BLACK)
 
         time.sleep(0.05)
-
+    """
 
 main()
