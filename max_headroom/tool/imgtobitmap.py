@@ -3,6 +3,11 @@
     Convert image file to python module for use with blit_bitmap.
 
     Usage imgtobitmap image_file bits_per_pixel >image.py
+
+    Caveat: imgtobitmap.py requires `sudo pip install Pillow --upgrade`, 
+    as debian11 default Pillow version 8.whatever is too old 
+       - (tested good after upgrade with Pillow-10.1.0)
+
 '''
 
 import sys
