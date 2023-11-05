@@ -15,8 +15,8 @@
 
 # use 3 bits per pixel / 8 colors
 
-./imgtobitmap.py media/resized-20-frames-to-240x240/ezgif-frame-001.png 3 >h1.py
-./imgtobitmap.py media/resized-20-frames-to-240x240/ezgif-frame-002.png 3 >h2.py
-./imgtobitmap.py media/resized-20-frames-to-240x240/ezgif-frame-003.png 3 >h3.py
-./imgtobitmap.py media/resized-20-frames-to-240x240/ezgif-frame-004.png 3 >h4.py
-./imgtobitmap.py media/resized-20-frames-to-240x240/ezgif-frame-005.png 3 >h5.py
+./imgtobitmap.py ../media/resized-20-frames-to-240x240/ezgif-frame-001.png 3 >h1.py
+./imgtobitmap.py ../media/resized-20-frames-to-240x240/ezgif-frame-002.png 3 >h2.py
+./imgtobitmap.py ../media/resized-20-frames-to-240x240/ezgif-frame-003.png 3 >h3.py
+./imgtobitmap.py ../media/resized-20-frames-to-240x240/ezgif-frame-004.png 3 >h4.py
+./imgtobitmap.py ../media/resized-20-frames-to-240x240/ezgif-frame-005.png 3 >h5.py
