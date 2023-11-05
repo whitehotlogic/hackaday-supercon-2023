@@ -2,28 +2,28 @@
 
 
 # this works, so just storing it here for now
-# mogrify -resize 240x240^ -gravity Center -crop 240x240+0+0 +repage -quality 100 -path resized-20-frames-to-4x3-aspect-ratio/ original-clip-frames-timestamps-12s-14s-20fps/*.png
+# mogrify -resize 240x240^ -gravity Center -crop 240x240+0+0 +repage -quality 100 -path resized-20-frames-correct-aspect-ratio-lower-quality/ original-clip-frames-timestamps-12s-14s-20fps/*.png
 
 
 # use 3 bits per pixel / 8 colors
 
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-001.png 3 >h1.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-002.png 3 >h2.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-003.png 3 >h3.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-004.png 3 >h4.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-005.png 3 >h5.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-006.png 3 >h6.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-007.png 3 >h7.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-008.png 3 >h8.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-009.png 3 >h9.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-010.png 3 >h10.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-011.png 3 >h11.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-012.png 3 >h12.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-013.png 3 >h13.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-014.png 3 >h14.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-015.png 3 >h15.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-016.png 3 >h16.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-017.png 3 >h17.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-018.png 3 >h18.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-019.png 3 >h19.py
-./imgtobitmap.py ../media/resized-20-frames-to-4x3-aspect-ratio/ezgif-frame-020.png 3 >h20.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-001.png 3 >h1.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-002.png 3 >h2.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-003.png 3 >h3.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-004.png 3 >h4.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-005.png 3 >h5.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-006.png 3 >h6.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-007.png 3 >h7.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-008.png 3 >h8.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-009.png 3 >h9.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-010.png 3 >h10.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-011.png 3 >h11.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-012.png 3 >h12.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-013.png 3 >h13.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-014.png 3 >h14.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-015.png 3 >h15.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-016.png 3 >h16.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-017.png 3 >h17.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-018.png 3 >h18.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-019.png 3 >h19.py
+./imgtobitmap.py ../media/resized-20-frames-correct-aspect-ratio-lower-quality/ezgif-frame-020.png 3 >h20.py
