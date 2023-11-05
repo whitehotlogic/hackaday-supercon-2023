@@ -137,7 +137,7 @@ def scrolltext():
     alternate = False
 
     #while True:
-    for i in range(800):
+    for i in range(600):
         
         # clear top line before scrolling off display
         tft.fill_rect(0, scroll, width, 1, background)
@@ -209,11 +209,12 @@ def main():
 
     while True:
         
+        tft.fill(gc9a01.BLACK)
+        
         # enable display and clear screen
         tft.init()
         
         toasters()
-        
 
         tft.fill(gc9a01.BLACK)
         
@@ -223,7 +224,8 @@ def main():
                 tft.bitmap(frame, 0, 0)
                 time.sleep(0.05)    
           
-
+        tft.fill(gc9a01.BLACK)
+        
         scrolltext()
 
 main()
