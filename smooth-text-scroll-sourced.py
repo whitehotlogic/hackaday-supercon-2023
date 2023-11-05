@@ -80,12 +80,14 @@ def main():
             # write character hex value as a string
             tft.text(
                 font,
-                'x{:02x}'.format(character),
+                #'x{:02x}'.format(character),
+                'hackaday 2023',
                 16,
                 line,
                 foreground,
                 background)
 
+            """
             # write character using a integer (could be > 0x7f)
             tft.text(
                 font,
@@ -94,6 +96,7 @@ def main():
                 line,
                 foreground,
                 background)
+            """
 
             # change color for next line
             foreground = next(colors)
