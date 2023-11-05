@@ -1,3 +1,4 @@
+### https://raw.githubusercontent.com/russhughes/gc9a01_mpy/main/examples/RP2/scroll.py
 """
 scroll.py
 
@@ -39,15 +40,14 @@ def cycle(p):
 
 
 def main():
-    spi = SPI(1, baudrate=60000000, sck=Pin(14), mosi=Pin(15))
-    tft = gc9a01.GC9A01(
-        spi,
-        240,
-        240,
-        reset=Pin(11, Pin.OUT),
-        cs=Pin(13, Pin.OUT),
-        dc=Pin(12, Pin.OUT),
-        backlight=Pin(10, Pin.OUT),
+    
+    spi = SPI(0, baudrate=40000000, sck=Pin(2, Pin.OUT), mosi=Pin(3, Pin.OUT), miso=Pin(20,Pin.IN))
+    
+    tft = gc9a01.GC9A01(spi, 240, 240,
+        reset=Pin(4, Pin.OUT),
+        cs=Pin(26, Pin.OUT),  
+        dc=Pin(5, Pin.OUT),
+        backlight=Pin(27, Pin.OUT),  
         rotation=0)
 
     colors = cycle([0xe000, 0xece0, 0xe7e0, 0x5e0, 0x00d3, 0x7030])
