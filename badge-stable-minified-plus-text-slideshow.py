@@ -10,6 +10,7 @@ from screen import Screen # hack around vectorscope can only be reconstructed on
 
 def slideshow():
     
+    """
     ## To animate, you need to clear v.wave.outBuffer_ready and wait for it to go true
     ## Each output buffer frame has 256 samples, so takes ~8.5 ms at 30 kHz
 
@@ -37,11 +38,68 @@ def slideshow():
         rotation=0)
             
     tft.init()
-    """
+    
+    foreground = gc9a01.color565(10,15,10)
+    background = gc9a01.color565(45, 217, 80)
 
     while(True):
         
-        
+
+        tft.fill(background)
+        utime.sleep(1)
+
+        height = tft.height()
+        width = tft.width()
+        last_line = height - font.HEIGHT
+
+        tfa = 0        # top free area
+        tfb = 0        # bottom free area
+        tft.vscrdef(tfa, height, tfb)
+
+        scroll = 0
+        character = font.FIRST
+
+        while True:
+            # clear top line before scrolling off display
+            tft.fill_rect(0, scroll, width, 1, background)
+
+            # Write new line when we have scrolled the height of a character
+            if scroll % font.HEIGHT == 0:
+                line = (scroll + last_line) % height
+
+                # write character hex value as a string
+                tft.text(
+                    font,
+                    'x{:02x}'.format(character),
+                    16,
+                    line,
+                    foreground,
+                    background)
+
+                # write character using a integer (could be > 0x7f)
+                tft.text(
+                    font,
+                    character,
+                    90,
+                    line,
+                    foreground,
+                    background)
+
+                # change color for next line
+                foreground = next(colors)
+
+                # next character with rollover at 256
+                character += 1
+                if character > font.LAST:
+                    character = font.FIRST
+
+            # scroll the screen up 1 row
+            tft.vscsad(scroll+tfa)
+            scroll += 1
+            scroll %= height
+
+            utime.sleep(0.01)
+
 
         """
         ## -------------
