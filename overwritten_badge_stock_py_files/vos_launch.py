@@ -9,6 +9,7 @@ import gc9a01
 import vga1_16x32 as font
 import h15, h6
 import t1, t2, t3, t4, t5
+import math
 
 TOASTERS = [t1, t2, t3, t4]
 TOAST = [t5]
@@ -224,6 +225,43 @@ def main():
                 tft.bitmap(frame, 0, 0)
                 time.sleep(0.05)    
           
+
+        
+        
+        tft.fill(gc9a01.BLACK)
+        tft.init()
+        def circle(x,y,r,c):
+            tft.hline(x-r,y,r*2,c)
+            for i in range(1,r):
+                a = int(math.sqrt(r*r-i*i)) # Pythagoras!
+                tft.hline(x-a,y+i,a*2,c) # Lower half
+                tft.hline(x-a,y-i,a*2,c) # Upper half
+
+        # LEFT-MOUNTAIN: draws left, from bottom-to-top
+        for i in range(122,0,-8):
+            tft.line(0,20+i,i,140,gc9a01.YELLOW)
+            utime.sleep(0.05)
+            
+        # TERRAIN: draws initial terrain lines, from bottom-to-top
+        for i in range(300,122,-8):
+            tft.line(0,20+i,i,140,gc9a01.YELLOW)
+            utime.sleep(0.05)
+            
+        # TERRAIN: draws cross-grid terrain lines, from right-to-left
+        for i in range(240,0,-8):
+            tft.line(i,240,20+i,140,gc9a01.YELLOW)
+            utime.sleep(0.05)
+
+        # SKY: draws thing from right-to-left
+        for i in range(240,0,-8):
+            tft.line(i,0,20+i,140,gc9a01.YELLOW)
+            utime.sleep(0.05)
+            
+        circle(160,100,30,gc9a01.YELLOW)
+
+        utime.sleep(2)
+
+        ##### credits
         tft.fill(gc9a01.BLACK)
         
         scrolltext()
